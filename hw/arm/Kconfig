@@ -234,6 +234,12 @@ config STM32VLDISCOVERY
     depends on TCG && ARM
     select STM32F100_SOC
 
+config STM32U545BOARD
+    bool
+    default y
+    depends on TCG && ARM
+    select STM32U545_SOC
+
 config STRONGARM
     bool
     select PXA2XX_TIMER
@@ -391,6 +397,11 @@ config STM32F405_SOC
     select STM32_RCC
     select STM32F4XX_SYSCFG
     select STM32F4XX_EXTI
+
+config STM32U545_SOC
+    bool
+    select ARM_V7M
+    select STM32U5XX_USART
 
 config B_L475E_IOT01A
     bool
